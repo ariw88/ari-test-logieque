@@ -3,19 +3,77 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #F99601;
+  min-height: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-menu {}
+
+.main-menu ul {}
+
+.main-menu ul li {
+  float: left;
+  list-style: none;
+}
+
+.main-menu ul li a {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  padding: 0 10px;
+  position: relative;
+}
+
+.main-menu ul li a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.main-menu ul li.active a::after {
+  content: ".";
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+
+.logo-h {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  color: #F99601;
+  border-radius: 50%;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 40px;
+  left: 12px;
+  top: 10px;
 }
 
 .App-link {
@@ -26,7 +84,72 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.news-wrap {
+  float: left;
+  width: 100%;
+  position: relative;
+  margin-top: 15px;
+  border-radius: 5px;
+  background: #FFFFFF;
+  padding: 10px 10px 10px 40px;
+}
+
+.news-wrap:last-child {
+  margin-bottom: 15px;
+}
+
+.no-news {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: #F99601;
+  font-size: 10px;
+  color: #FFFFFF;
+  line-height: 20px;
+}
+
+.title-news {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-align: left;
+}
+.title-news a{
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-align: left;
+}
+
+.from-news {
+  font-size: 14px;
+  line-height: 16px;
+  color: #DABC8F;
+  text-align: left;
+}
+
+.rating-news {
+  padding-top: 8px;
+  text-align: left;
+  font-size: 11px;
+  line-height: 13px;
+  color: #4F78B5;
+}
+
+.posting-news {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 11px;
+  line-height: 13px;
+  color: #898989
 }
